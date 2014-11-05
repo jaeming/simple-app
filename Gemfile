@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+group :test do
+  gem 'rspec-rails', '~> 3.1.0'
+  gem 'capybara'
+end
+
 gem 'normalize-rails', '~> 3.0.1'
 
 gem 'semantic-ui-sass', '~> 0.19.3.0'
