@@ -76230,3 +76230,1943 @@ Processing by HomeController#index as HTML
   Rendered home/index.html.haml within layouts/application (1.5ms)
   Rendered layouts/_messages.html.haml (0.1ms)
 Completed 200 OK in 400ms (Views: 399.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-07 03:10:55 +1300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (2.3ms)
+  Rendered layouts/_messages.html.haml (1.1ms)
+Completed 200 OK in 765ms (Views: 756.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-07 03:10:56 +1300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 408ms (Views: 407.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 03:11:02 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (87.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 493ms (Views: 491.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/index" for 127.0.0.1 at 2014-11-07 03:11:07 +1300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks"  WHERE "tasks"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound - Couldn't find Task with 'id'=index:
+  (gem) activerecord-4.1.6/lib/active_record/relation/finder_methods.rb:320:in `Task::ActiveRecord_Relation#raise_record_not_found_exception!'
+  (gem) activerecord-4.1.6/lib/active_record/relation/finder_methods.rb:429:in `Task::ActiveRecord_Relation#find_one'
+  (gem) activerecord-4.1.6/lib/active_record/relation/finder_methods.rb:413:in `Task::ActiveRecord_Relation#find_with_ids'
+  (gem) activerecord-4.1.6/lib/active_record/relation/finder_methods.rb:68:in `Task::ActiveRecord_Relation#find'
+  (gem) activerecord-4.1.6/lib/active_record/querying.rb:3:in `Task.find'
+  app/controllers/tasks_controller.rb:22:in `TasksController#show'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/implicit_render.rb:4:in `TasksController#send_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:189:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:10:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:20:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::End#call'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in TasksController#run_callbacks'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `ActiveSupport::Notifications.instrument'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:19:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rescue.rb:29:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:31:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in TasksController#process'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `TasksController#process'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `TasksController#dispatch'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:30:in `TasksController#dispatch'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/params_wrapper.rb:250:in `TasksController.action'
+  (gem) activerecord-4.1.6/lib/active_record/railties/controller_runtime.rb:18:in `ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:136:in `ActionDispatch::Routing::RouteSet::Dispatcher#call'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:30:in `ActionDispatch::Journey::Router#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:196:in `ActionDispatch::Journey::Router#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rack_delegation.rb:13:in `ActionDispatch::Routing::RouteSet#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:232:in `block in BetterErrors::Middleware#app_call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `BetterErrors::Middleware#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `Rack::ETag#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:50:in `Rack::ConditionalGet#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:73:in `block in Rack::Head#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::ParamsParser#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::Flash#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:678:in `ActionDispatch::Session::CookieStore#context'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:20:in `ActionDispatch::Session::CookieStore#call'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:14:in `ActionDispatch::Cookies#call'
+  (gem) rack-1.5.2/lib/rack/etag.rb:23:in `ActiveRecord::QueryCache#call'
+  (gem) rack-1.5.2/lib/rack/conditionalget.rb:25:in `ActiveRecord::ConnectionAdapters::ConnectionManagement#call'
+  (gem) rack-1.5.2/lib/rack/head.rb:11:in `ActiveRecord::Migration::CheckPending#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/params_parser.rb:27:in `ActionDispatch::Callbacks#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/flash.rb:254:in `ActionDispatch::Callbacks#run_callbacks'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `ActionDispatch::Callbacks#call'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `ActionDispatch::Reloader#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/cookies.rb:560:in `ActionDispatch::RemoteIp#call'
+  (gem) activerecord-4.1.6/lib/active_record/query_cache.rb:36:in `ActionDispatch::DebugExceptions#call'
+  (gem) activerecord-4.1.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `ActionDispatch::ShowExceptions#call'
+  (gem) activerecord-4.1.6/lib/active_record/migration.rb:380:in `Rails::Rack::Logger#call_app'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:29:in `block in Rails::Rack::Logger#call'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:82:in `ActiveSupport::Logger#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:27:in `ActiveSupport::Logger::SimpleFormatter#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/reloader.rb:73:in `ActiveSupport::Logger#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/remote_ip.rb:76:in `Rails::Rack::Logger#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `Rails::Rack::Logger#call_with_quiet_assets'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/show_exceptions.rb:30:in `ActionDispatch::RequestId#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:38:in `Rack::MethodOverride#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `block in Rack::Runtime#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `block in ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:26:in `Rack::Lock#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `ActionDispatch::Static#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `Rack::Sendfile#call'
+  (gem) quiet_assets-1.0.3/lib/quiet_assets.rb:23:in `SimpleApp::Application#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/request_id.rb:21:in `SimpleApp::Application#call'
+  (gem) rack-1.5.2/lib/rack/methodoverride.rb:21:in `Rack::Lock#call'
+  (gem) rack-1.5.2/lib/rack/runtime.rb:17:in `Rack::ContentLength#call'
+  (gem) activesupport-4.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `Rack::Handler::WEBrick#service'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `WEBrick::HTTPServer#service'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/static.rb:64:in `WEBrick::HTTPServer#run'
+  (gem) rack-1.5.2/lib/rack/sendfile.rb:112:in `WEBrick::HTTPServer#start_thread'
+  (gem) railties-4.1.6/lib/rails/engine.rb:514:in `call'
+  (gem) railties-4.1.6/lib/rails/application.rb:144:in `call'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  (gem) rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+  (gem) rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70225883171500/variables" for 127.0.0.1 at 2014-11-07 03:11:07 +1300
+
+
+Started GET "/tasks/index" for 127.0.0.1 at 2014-11-07 03:11:25 +1300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound - Couldn't find Task with 'id'=index:
+  (gem) activerecord-4.1.6/lib/active_record/relation/finder_methods.rb:320:in `Task::ActiveRecord_Relation#raise_record_not_found_exception!'
+  (gem) activerecord-4.1.6/lib/active_record/relation/finder_methods.rb:429:in `Task::ActiveRecord_Relation#find_one'
+  (gem) activerecord-4.1.6/lib/active_record/relation/finder_methods.rb:413:in `Task::ActiveRecord_Relation#find_with_ids'
+  (gem) activerecord-4.1.6/lib/active_record/relation/finder_methods.rb:68:in `Task::ActiveRecord_Relation#find'
+  (gem) activerecord-4.1.6/lib/active_record/querying.rb:3:in `Task.find'
+  app/controllers/tasks_controller.rb:22:in `TasksController#show'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/implicit_render.rb:4:in `TasksController#send_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:189:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:10:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:20:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::End#call'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in TasksController#run_callbacks'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `ActiveSupport::Notifications.instrument'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:19:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rescue.rb:29:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:31:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in TasksController#process'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `TasksController#process'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `TasksController#dispatch'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:30:in `TasksController#dispatch'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/params_wrapper.rb:250:in `TasksController.action'
+  (gem) activerecord-4.1.6/lib/active_record/railties/controller_runtime.rb:18:in `ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:136:in `ActionDispatch::Routing::RouteSet::Dispatcher#call'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:30:in `ActionDispatch::Journey::Router#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:196:in `ActionDispatch::Journey::Router#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rack_delegation.rb:13:in `ActionDispatch::Routing::RouteSet#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:232:in `block in BetterErrors::Middleware#app_call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `BetterErrors::Middleware#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `Rack::ETag#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:50:in `Rack::ConditionalGet#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:73:in `block in Rack::Head#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::ParamsParser#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::Flash#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:678:in `ActionDispatch::Session::CookieStore#context'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:20:in `ActionDispatch::Session::CookieStore#call'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:14:in `ActionDispatch::Cookies#call'
+  (gem) rack-1.5.2/lib/rack/etag.rb:23:in `ActiveRecord::QueryCache#call'
+  (gem) rack-1.5.2/lib/rack/conditionalget.rb:25:in `ActiveRecord::ConnectionAdapters::ConnectionManagement#call'
+  (gem) rack-1.5.2/lib/rack/head.rb:11:in `ActiveRecord::Migration::CheckPending#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/params_parser.rb:27:in `ActionDispatch::Callbacks#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/flash.rb:254:in `ActionDispatch::Callbacks#run_callbacks'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `ActionDispatch::Callbacks#call'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `ActionDispatch::Reloader#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/cookies.rb:560:in `ActionDispatch::RemoteIp#call'
+  (gem) activerecord-4.1.6/lib/active_record/query_cache.rb:36:in `ActionDispatch::DebugExceptions#call'
+  (gem) activerecord-4.1.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `ActionDispatch::ShowExceptions#call'
+  (gem) activerecord-4.1.6/lib/active_record/migration.rb:380:in `Rails::Rack::Logger#call_app'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:29:in `block in Rails::Rack::Logger#call'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:82:in `ActiveSupport::Logger#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:27:in `ActiveSupport::Logger::SimpleFormatter#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/reloader.rb:73:in `ActiveSupport::Logger#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/remote_ip.rb:76:in `Rails::Rack::Logger#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `Rails::Rack::Logger#call_with_quiet_assets'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/show_exceptions.rb:30:in `ActionDispatch::RequestId#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:38:in `Rack::MethodOverride#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `block in Rack::Runtime#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `block in ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:26:in `Rack::Lock#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `ActionDispatch::Static#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `Rack::Sendfile#call'
+  (gem) quiet_assets-1.0.3/lib/quiet_assets.rb:23:in `SimpleApp::Application#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/request_id.rb:21:in `SimpleApp::Application#call'
+  (gem) rack-1.5.2/lib/rack/methodoverride.rb:21:in `Rack::Lock#call'
+  (gem) rack-1.5.2/lib/rack/runtime.rb:17:in `Rack::ContentLength#call'
+  (gem) activesupport-4.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `Rack::Handler::WEBrick#service'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `WEBrick::HTTPServer#service'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/static.rb:64:in `WEBrick::HTTPServer#run'
+  (gem) rack-1.5.2/lib/rack/sendfile.rb:112:in `WEBrick::HTTPServer#start_thread'
+  (gem) railties-4.1.6/lib/rails/engine.rb:514:in `call'
+  (gem) railties-4.1.6/lib/rails/application.rb:144:in `call'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  (gem) rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+  (gem) rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70225828620060/variables" for 127.0.0.1 at 2014-11-07 03:11:26 +1300
+  [1m[36mTask Load (1.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+
+
+Started GET "/tasks/index" for 127.0.0.1 at 2014-11-07 03:15:34 +1300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks"  WHERE "tasks"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 11ms
+
+ActiveRecord::RecordNotFound - Couldn't find Task with 'id'=index:
+  (gem) activerecord-4.1.6/lib/active_record/relation/finder_methods.rb:320:in `Task::ActiveRecord_Relation#raise_record_not_found_exception!'
+  (gem) activerecord-4.1.6/lib/active_record/relation/finder_methods.rb:429:in `Task::ActiveRecord_Relation#find_one'
+  (gem) activerecord-4.1.6/lib/active_record/relation/finder_methods.rb:413:in `Task::ActiveRecord_Relation#find_with_ids'
+  (gem) activerecord-4.1.6/lib/active_record/relation/finder_methods.rb:68:in `Task::ActiveRecord_Relation#find'
+  (gem) activerecord-4.1.6/lib/active_record/querying.rb:3:in `Task.find'
+  app/controllers/tasks_controller.rb:22:in `TasksController#show'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/implicit_render.rb:4:in `TasksController#send_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:189:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:10:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:20:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::End#call'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in TasksController#run_callbacks'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `ActiveSupport::Notifications.instrument'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:19:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rescue.rb:29:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:31:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in TasksController#process'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `TasksController#process'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `TasksController#dispatch'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:30:in `TasksController#dispatch'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/params_wrapper.rb:250:in `TasksController.action'
+  (gem) activerecord-4.1.6/lib/active_record/railties/controller_runtime.rb:18:in `ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:136:in `ActionDispatch::Routing::RouteSet::Dispatcher#call'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:30:in `ActionDispatch::Journey::Router#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:196:in `ActionDispatch::Journey::Router#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rack_delegation.rb:13:in `ActionDispatch::Routing::RouteSet#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:232:in `block in BetterErrors::Middleware#app_call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `BetterErrors::Middleware#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `Rack::ETag#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:50:in `Rack::ConditionalGet#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:73:in `block in Rack::Head#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::ParamsParser#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::Flash#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:678:in `ActionDispatch::Session::CookieStore#context'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:20:in `ActionDispatch::Session::CookieStore#call'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:14:in `ActionDispatch::Cookies#call'
+  (gem) rack-1.5.2/lib/rack/etag.rb:23:in `ActiveRecord::QueryCache#call'
+  (gem) rack-1.5.2/lib/rack/conditionalget.rb:25:in `ActiveRecord::ConnectionAdapters::ConnectionManagement#call'
+  (gem) rack-1.5.2/lib/rack/head.rb:11:in `ActiveRecord::Migration::CheckPending#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/params_parser.rb:27:in `ActionDispatch::Callbacks#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/flash.rb:254:in `ActionDispatch::Callbacks#run_callbacks'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `ActionDispatch::Callbacks#call'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `ActionDispatch::Reloader#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/cookies.rb:560:in `ActionDispatch::RemoteIp#call'
+  (gem) activerecord-4.1.6/lib/active_record/query_cache.rb:36:in `ActionDispatch::DebugExceptions#call'
+  (gem) activerecord-4.1.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `ActionDispatch::ShowExceptions#call'
+  (gem) activerecord-4.1.6/lib/active_record/migration.rb:380:in `Rails::Rack::Logger#call_app'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:29:in `block in Rails::Rack::Logger#call'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:82:in `ActiveSupport::Logger#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:27:in `ActiveSupport::Logger::SimpleFormatter#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/reloader.rb:73:in `ActiveSupport::Logger#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/remote_ip.rb:76:in `Rails::Rack::Logger#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `Rails::Rack::Logger#call_with_quiet_assets'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/show_exceptions.rb:30:in `ActionDispatch::RequestId#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:38:in `Rack::MethodOverride#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `block in Rack::Runtime#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `block in ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:26:in `Rack::Lock#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `ActionDispatch::Static#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `Rack::Sendfile#call'
+  (gem) quiet_assets-1.0.3/lib/quiet_assets.rb:23:in `SimpleApp::Application#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/request_id.rb:21:in `SimpleApp::Application#call'
+  (gem) rack-1.5.2/lib/rack/methodoverride.rb:21:in `Rack::Lock#call'
+  (gem) rack-1.5.2/lib/rack/runtime.rb:17:in `Rack::ContentLength#call'
+  (gem) activesupport-4.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `Rack::Handler::WEBrick#service'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `WEBrick::HTTPServer#service'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/static.rb:64:in `WEBrick::HTTPServer#run'
+  (gem) rack-1.5.2/lib/rack/sendfile.rb:112:in `WEBrick::HTTPServer#start_thread'
+  (gem) railties-4.1.6/lib/rails/engine.rb:514:in `call'
+  (gem) railties-4.1.6/lib/rails/application.rb:144:in `call'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  (gem) rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+  (gem) rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70248863620760/variables" for 127.0.0.1 at 2014-11-07 03:15:34 +1300
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:15:51 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.2ms)
+  Rendered tasks/index.html.haml within layouts/application (7.7ms)
+  Rendered layouts/_messages.html.haml (1.2ms)
+Completed 200 OK in 779ms (Views: 778.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:16:44 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.1ms)
+  Rendered tasks/index.html.haml within layouts/application (3.6ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 413ms (Views: 411.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:17:37 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.4ms)
+  Rendered tasks/index.html.haml within layouts/application (3.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 425ms (Views: 424.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:19:20 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.1ms)
+  Rendered tasks/index.html.haml within layouts/application (3.6ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 411ms (Views: 410.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:21:23 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 444ms (Views: 443.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:21:44 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 422ms (Views: 420.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:22:14 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 412ms (Views: 411.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:22:24 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 445ms (Views: 444.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:22:31 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 421ms (Views: 420.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:23:28 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (0.4ms)
+  Rendered tasks/index.html.haml within layouts/application (3.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 411ms (Views: 410.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:24:12 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (0.4ms)
+  Rendered tasks/index.html.haml within layouts/application (3.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 444ms (Views: 443.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:24:19 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 394ms (Views: 392.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:24:40 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 415ms (Views: 414.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:24:53 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (26.7ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 452ms (Views: 451.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:25:24 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 409ms (Views: 408.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:25:42 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (0.4ms)
+  Rendered tasks/index.html.haml within layouts/application (3.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 414ms (Views: 413.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:25:53 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 427ms (Views: 426.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:26:27 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 415ms (Views: 413.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:26:42 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 416ms (Views: 414.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:28:01 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 429ms (Views: 427.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:28:37 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (1.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 581ms (Views: 580.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:28:57 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (2.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 570ms (Views: 569.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:31:29 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.2ms)
+  Rendered tasks/index.html.haml within layouts/application (4.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 448ms (Views: 447.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:31:52 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.4ms)
+  Rendered tasks/index.html.haml within layouts/application (3.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 395ms (Views: 394.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:32:02 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.4ms)
+  Rendered tasks/index.html.haml within layouts/application (3.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 419ms (Views: 418.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:32:13 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 398ms (Views: 397.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:32:21 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.4ms)
+  Rendered tasks/index.html.haml within layouts/application (3.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 420ms (Views: 419.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:36:26 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.6ms)
+  Rendered tasks/index.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 398ms (Views: 396.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:36:56 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.8ms)
+  Rendered tasks/index.html.haml within layouts/application (3.6ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 418ms (Views: 416.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:37:43 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.7ms)
+  Rendered tasks/index.html.haml within layouts/application (3.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 394ms (Views: 392.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:38:09 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 396ms (Views: 395.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:38:30 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.6ms)
+  Rendered tasks/index.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 396ms (Views: 395.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:38:43 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.6ms)
+  Rendered tasks/index.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 399ms (Views: 397.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:38:49 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.7ms)
+  Rendered tasks/index.html.haml within layouts/application (3.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 417ms (Views: 416.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:42:48 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (0.6ms)
+  Rendered tasks/index.html.haml within layouts/application (2.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 547ms (Views: 546.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:43:06 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (1.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 640ms (Views: 638.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:43:49 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (0.6ms)
+  Rendered tasks/index.html.haml within layouts/application (2.6ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 567ms (Views: 565.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:44:10 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 542ms (Views: 541.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:46:29 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 393ms (Views: 392.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:47:23 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.6ms)
+  Rendered tasks/index.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 398ms (Views: 396.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:48:44 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (0.6ms)
+  Rendered tasks/index.html.haml within layouts/application (2.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 577ms (Views: 575.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:49:16 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.9ms)
+  Rendered tasks/index.html.haml within layouts/application (4.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 431ms (Views: 429.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:49:52 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (0.5ms)
+  Rendered tasks/index.html.haml within layouts/application (2.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 530ms (Views: 529.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-07 03:50:00 +1300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 390ms (Views: 389.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:52:46 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.9ms)
+  Rendered tasks/index.html.haml within layouts/application (3.7ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 400ms (Views: 399.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:52:57 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (0.6ms)
+  Rendered tasks/index.html.haml within layouts/application (2.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 418ms (Views: 416.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 03:59:45 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (2.6ms)
+  Rendered tasks/index.html.haml within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 7ms
+
+Haml::SyntaxError - Illegal nesting: nesting within plain text is illegal.:
+  (gem) haml-4.0.5/lib/haml/parser.rb:255:in `Haml::Parser#plain'
+  (gem) haml-4.0.5/lib/haml/parser.rb:235:in `Haml::Parser#process_line'
+  (gem) haml-4.0.5/lib/haml/parser.rb:121:in `Haml::Parser#parse'
+  (gem) haml-4.0.5/lib/haml/engine.rb:66:in `Haml::Engine#initialize'
+  (gem) haml-4.0.5/lib/haml/template/plugin.rb:25:in `Haml::Plugin#compile'
+  (gem) haml-4.0.5/lib/haml/template/plugin.rb:25:in `Haml::Plugin.call'
+  (gem) haml-4.0.5/lib/haml/template/plugin.rb:30:in `ActionView::Template#compile'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:270:in `ActionView::Template#compile!'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:245:in `block (2 levels) in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:161:in `ActionView::Template#instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:339:in `ActionView::Template#compile!'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:244:in `block in ActionView::Template#compile!'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:232:in `ActionView::Template#render'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:232:in `ActiveSupport::Notifications.instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:144:in `block in ActionView::Template#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:161:in `ActionView::Template#render'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:339:in `ActionView::PartialRenderer#collection_with_template'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:143:in `ActionView::PartialRenderer#collection_with_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:399:in `block in ActionView::PartialRenderer#render_collection'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:395:in `ActionView::PartialRenderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:395:in `ActionView::PartialRenderer#instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:291:in `ActiveSupport::Notifications.instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:275:in `block in ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in ActionView::PartialRenderer#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `ActionView::PartialRenderer#render'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `ActionView::Renderer#render_partial'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `#<Class:0x007fc82b4617c0>#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:274:in `#<Class:0x007fc82b4617c0>#render_with_haml'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:47:in `#<Class:0x007fc82b4617c0>#non_haml'
+  (gem) actionview-4.1.6/lib/action_view/helpers/rendering_helper.rb:35:in `#<Class:0x007fc82b4617c0>#render_with_haml'
+  (gem) haml-4.0.5/lib/haml/helpers/action_view_mods.rb:10:in `block in #<Class:0x007fc82b4617c0>#_app_views_tasks_index_html_haml__3760800573966817371_70248835115060'
+  (gem) haml-4.0.5/lib/haml/helpers.rb:89:in `ActionView::Template#render'
+  (gem) haml-4.0.5/lib/haml/helpers/action_view_mods.rb:10:in `ActiveSupport::Notifications.instrument'
+  app/views/tasks/index.html.haml:8:in `ActionView::Template#instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:145:in `block in ActionView::Template#render'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:161:in `ActionView::TemplateRenderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:339:in `ActionView::TemplateRenderer#instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:143:in `ActiveSupport::Notifications.instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in ActionView::TemplateRenderer#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `ActionView::TemplateRenderer#render_template'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `ActionView::TemplateRenderer#render_with_layout'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `ActionView::TemplateRenderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:54:in `block in ActionView::TemplateRenderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:62:in `ActionView::Renderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:53:in `ActionView::Renderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:17:in `TasksController#_render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:42:in `TasksController#_render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:23:in `TasksController#render_to_body'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:99:in `TasksController#render_to_body'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/streaming.rb:217:in `TasksController#render_to_body'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:82:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:32:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/renderers.rb:32:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/abstract_controller/rendering.rb:25:in `Benchmark.ms'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:16:in `Benchmark.realtime'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in Benchmark.ms'
+  (gem) activesupport-4.1.6/lib/active_support/core_ext/benchmark.rb:12:in `block in TasksController#render'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `TasksController#cleanup_view_runtime'
+  (gem) activesupport-4.1.6/lib/active_support/core_ext/benchmark.rb:12:in `TasksController#cleanup_view_runtime'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:41:in `block in TasksController#render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:84:in `TasksController#default_render'
+  (gem) activerecord-4.1.6/lib/active_record/railties/controller_runtime.rb:25:in `TasksController#send_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:40:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/implicit_render.rb:10:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/implicit_render.rb:5:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:189:in `ActiveSupport::Callbacks::Filters::End#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:10:in `ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:20:in `block in ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `TasksController#run_callbacks'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:19:in `TasksController#process'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rescue.rb:29:in `TasksController#process'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:31:in `block in TasksController#dispatch'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in TasksController#dispatch'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `TasksController.action'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:30:in `ActionDispatch::Routing::RouteSet::Dispatcher#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/params_wrapper.rb:250:in `ActionDispatch::Journey::Router#call'
+  (gem) activerecord-4.1.6/lib/active_record/railties/controller_runtime.rb:18:in `ActionDispatch::Journey::Router#call'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:136:in `ActionDispatch::Routing::RouteSet#call'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:30:in `BetterErrors::Middleware#app_call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:196:in `BetterErrors::Middleware#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rack_delegation.rb:13:in `Rack::ETag#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:232:in `block in Rack::ConditionalGet#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `Rack::Head#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `ActionDispatch::ParamsParser#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:50:in `ActionDispatch::Flash#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:73:in `block in ActionDispatch::Session::CookieStore#context'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::Session::CookieStore#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::Cookies#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:678:in `ActiveRecord::QueryCache#call'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:20:in `ActiveRecord::ConnectionAdapters::ConnectionManagement#call'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:14:in `ActiveRecord::Migration::CheckPending#call'
+  (gem) rack-1.5.2/lib/rack/etag.rb:23:in `ActionDispatch::Callbacks#call'
+  (gem) rack-1.5.2/lib/rack/conditionalget.rb:25:in `ActionDispatch::Callbacks#run_callbacks'
+  (gem) rack-1.5.2/lib/rack/head.rb:11:in `ActionDispatch::Callbacks#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/params_parser.rb:27:in `ActionDispatch::Reloader#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/flash.rb:254:in `ActionDispatch::RemoteIp#call'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `ActionDispatch::DebugExceptions#call'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `ActionDispatch::ShowExceptions#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/cookies.rb:560:in `Rails::Rack::Logger#call_app'
+  (gem) activerecord-4.1.6/lib/active_record/query_cache.rb:36:in `Rails::Rack::Logger#call'
+  (gem) activerecord-4.1.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `ActiveSupport::Logger#tagged'
+  (gem) activerecord-4.1.6/lib/active_record/migration.rb:380:in `ActiveSupport::Logger::SimpleFormatter#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:29:in `block in ActiveSupport::Logger#tagged'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:82:in `Rails::Rack::Logger#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:27:in `Rails::Rack::Logger#call_with_quiet_assets'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/reloader.rb:73:in `ActionDispatch::RequestId#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/remote_ip.rb:76:in `Rack::MethodOverride#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `Rack::Runtime#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/show_exceptions.rb:30:in `ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:38:in `Rack::Lock#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `block in ActionDispatch::Static#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `block in Rack::Sendfile#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:26:in `SimpleApp::Application#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `SimpleApp::Application#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `Rack::Lock#call'
+  (gem) quiet_assets-1.0.3/lib/quiet_assets.rb:23:in `Rack::ContentLength#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/request_id.rb:21:in `Rack::Handler::WEBrick#service'
+  (gem) rack-1.5.2/lib/rack/methodoverride.rb:21:in `WEBrick::HTTPServer#service'
+  (gem) rack-1.5.2/lib/rack/runtime.rb:17:in `WEBrick::HTTPServer#run'
+  (gem) activesupport-4.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `WEBrick::HTTPServer#start_thread'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/static.rb:64:in `call'
+  (gem) rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  (gem) railties-4.1.6/lib/rails/engine.rb:514:in `call'
+  (gem) railties-4.1.6/lib/rails/application.rb:144:in `call'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  (gem) rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+  (gem) rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70248835378160/variables" for 127.0.0.1 at 2014-11-07 03:59:46 +1300
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:00:07 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.7ms)
+  Rendered tasks/index.html.haml within layouts/application (3.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 430ms (Views: 428.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:00:35 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (2.3ms)
+  Rendered tasks/index.html.haml within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 6ms
+
+ArgumentError - wrong number of arguments (0 for 1..4):
+  (gem) actionview-4.1.6/lib/action_view/helpers/form_tag_helper.rb:358:in `#<Class:0x007fc82b4617c0>#_app_views_tasks__task_html_haml___3283176217055632244_70248834965540'
+  app/views/tasks/_task.html.haml:3:in `ActionView::Template#render'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:145:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:161:in `ActionView::Template#instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:339:in `ActionView::Template#render'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:143:in `ActionView::PartialRenderer#collection_with_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:399:in `block in ActionView::PartialRenderer#collection_with_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:395:in `ActionView::PartialRenderer#render_collection'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:395:in `ActionView::PartialRenderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:291:in `ActionView::PartialRenderer#instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:275:in `block in ActiveSupport::Notifications.instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `block in ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `ActionView::PartialRenderer#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `ActionView::PartialRenderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `ActionView::Renderer#render_partial'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:274:in `#<Class:0x007fc82b4617c0>#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:47:in `#<Class:0x007fc82b4617c0>#render_with_haml'
+  (gem) actionview-4.1.6/lib/action_view/helpers/rendering_helper.rb:35:in `#<Class:0x007fc82b4617c0>#non_haml'
+  (gem) haml-4.0.5/lib/haml/helpers/action_view_mods.rb:10:in `block in #<Class:0x007fc82b4617c0>#render_with_haml'
+  (gem) haml-4.0.5/lib/haml/helpers.rb:89:in `#<Class:0x007fc82b4617c0>#_app_views_tasks_index_html_haml__3760800573966817371_70248835115060'
+  (gem) haml-4.0.5/lib/haml/helpers/action_view_mods.rb:10:in `ActionView::Template#render'
+  app/views/tasks/index.html.haml:8:in `ActiveSupport::Notifications.instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:145:in `block in ActionView::Template#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:161:in `ActionView::Template#render'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:339:in `ActionView::TemplateRenderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:143:in `ActionView::TemplateRenderer#instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in ActiveSupport::Notifications.instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `block in ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `ActionView::TemplateRenderer#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `ActionView::TemplateRenderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `ActionView::TemplateRenderer#render_with_layout'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:54:in `block in ActionView::TemplateRenderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:62:in `ActionView::TemplateRenderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:53:in `ActionView::Renderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:17:in `ActionView::Renderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:42:in `TasksController#_render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:23:in `TasksController#_render_template'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:99:in `TasksController#render_to_body'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/streaming.rb:217:in `TasksController#render_to_body'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:82:in `TasksController#render_to_body'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:32:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/renderers.rb:32:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/abstract_controller/rendering.rb:25:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:16:in `Benchmark.ms'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in Benchmark.realtime'
+  (gem) activesupport-4.1.6/lib/active_support/core_ext/benchmark.rb:12:in `block in Benchmark.ms'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `TasksController#render'
+  (gem) activesupport-4.1.6/lib/active_support/core_ext/benchmark.rb:12:in `TasksController#cleanup_view_runtime'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:41:in `block in TasksController#cleanup_view_runtime'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:84:in `TasksController#render'
+  (gem) activerecord-4.1.6/lib/active_record/railties/controller_runtime.rb:25:in `TasksController#default_render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:40:in `TasksController#send_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/implicit_render.rb:10:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/implicit_render.rb:5:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:189:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:10:in `ActiveSupport::Callbacks::Filters::End#call'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:20:in `block in ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in TasksController#run_callbacks'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:19:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rescue.rb:29:in `TasksController#process'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:31:in `block in TasksController#process'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in TasksController#dispatch'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `TasksController#dispatch'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `TasksController.action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:30:in `ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/params_wrapper.rb:250:in `ActionDispatch::Routing::RouteSet::Dispatcher#call'
+  (gem) activerecord-4.1.6/lib/active_record/railties/controller_runtime.rb:18:in `ActionDispatch::Journey::Router#call'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:136:in `ActionDispatch::Journey::Router#call'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:30:in `ActionDispatch::Routing::RouteSet#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:196:in `BetterErrors::Middleware#app_call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rack_delegation.rb:13:in `BetterErrors::Middleware#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:232:in `block in Rack::ETag#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `Rack::ConditionalGet#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `Rack::Head#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:50:in `ActionDispatch::ParamsParser#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:73:in `block in ActionDispatch::Flash#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::Session::CookieStore#context'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::Session::CookieStore#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:678:in `ActionDispatch::Cookies#call'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:20:in `ActiveRecord::QueryCache#call'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:14:in `ActiveRecord::ConnectionAdapters::ConnectionManagement#call'
+  (gem) rack-1.5.2/lib/rack/etag.rb:23:in `ActiveRecord::Migration::CheckPending#call'
+  (gem) rack-1.5.2/lib/rack/conditionalget.rb:25:in `ActionDispatch::Callbacks#call'
+  (gem) rack-1.5.2/lib/rack/head.rb:11:in `ActionDispatch::Callbacks#run_callbacks'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/params_parser.rb:27:in `ActionDispatch::Callbacks#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/flash.rb:254:in `ActionDispatch::Reloader#call'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `ActionDispatch::RemoteIp#call'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `ActionDispatch::DebugExceptions#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/cookies.rb:560:in `ActionDispatch::ShowExceptions#call'
+  (gem) activerecord-4.1.6/lib/active_record/query_cache.rb:36:in `Rails::Rack::Logger#call_app'
+  (gem) activerecord-4.1.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `Rails::Rack::Logger#call'
+  (gem) activerecord-4.1.6/lib/active_record/migration.rb:380:in `ActiveSupport::Logger#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:29:in `block in ActiveSupport::Logger::SimpleFormatter#tagged'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:82:in `ActiveSupport::Logger#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:27:in `Rails::Rack::Logger#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/reloader.rb:73:in `Rails::Rack::Logger#call_with_quiet_assets'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/remote_ip.rb:76:in `ActionDispatch::RequestId#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `Rack::MethodOverride#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/show_exceptions.rb:30:in `Rack::Runtime#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:38:in `ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `block in Rack::Lock#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `block in ActionDispatch::Static#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:26:in `Rack::Sendfile#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `SimpleApp::Application#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `SimpleApp::Application#call'
+  (gem) quiet_assets-1.0.3/lib/quiet_assets.rb:23:in `Rack::Lock#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/request_id.rb:21:in `Rack::ContentLength#call'
+  (gem) rack-1.5.2/lib/rack/methodoverride.rb:21:in `Rack::Handler::WEBrick#service'
+  (gem) rack-1.5.2/lib/rack/runtime.rb:17:in `WEBrick::HTTPServer#service'
+  (gem) activesupport-4.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `WEBrick::HTTPServer#run'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `WEBrick::HTTPServer#start_thread'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/static.rb:64:in `call'
+  (gem) rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  (gem) railties-4.1.6/lib/rails/engine.rb:514:in `call'
+  (gem) railties-4.1.6/lib/rails/application.rb:144:in `call'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  (gem) rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+  (gem) rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70248876334540/variables" for 127.0.0.1 at 2014-11-07 04:00:35 +1300
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:03:49 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (14.7ms)
+  Rendered tasks/index.html.haml within layouts/application (17.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 408ms (Views: 407.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:04:36 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (40.7ms)
+  Rendered tasks/index.html.haml within layouts/application (43.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 442ms (Views: 440.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:05:00 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (283.4ms)
+  Rendered tasks/index.html.haml within layouts/application (285.1ms)
+Completed 500 Internal Server Error in 287ms
+
+NameError - undefined local variable or method `tasks' for #<#<Class:0x007fc82b4617c0>:0x007fc82d4829c8>
+
+    Did you mean? task
+ :
+  app/views/tasks/_task.html.haml:2:in `#<Class:0x007fc82b4617c0>#_app_views_tasks__task_html_haml___3283176217055632244_70248864847380'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:145:in `block in ActionView::Template#render'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:161:in `ActiveSupport::Notifications.instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:339:in `ActionView::Template#instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:143:in `ActionView::Template#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:399:in `block in ActionView::PartialRenderer#collection_with_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:395:in `ActionView::PartialRenderer#collection_with_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:395:in `ActionView::PartialRenderer#render_collection'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:291:in `ActionView::PartialRenderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:275:in `block in ActionView::PartialRenderer#instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `ActionView::PartialRenderer#instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `ActionView::PartialRenderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:274:in `ActionView::Renderer#render_partial'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:47:in `#<Class:0x007fc82b4617c0>#render'
+  (gem) actionview-4.1.6/lib/action_view/helpers/rendering_helper.rb:35:in `#<Class:0x007fc82b4617c0>#render_with_haml'
+  (gem) haml-4.0.5/lib/haml/helpers/action_view_mods.rb:10:in `block in #<Class:0x007fc82b4617c0>#non_haml'
+  (gem) haml-4.0.5/lib/haml/helpers.rb:89:in `#<Class:0x007fc82b4617c0>#render_with_haml'
+  (gem) haml-4.0.5/lib/haml/helpers/action_view_mods.rb:10:in `#<Class:0x007fc82b4617c0>#_app_views_tasks_index_html_haml__3760800573966817371_70248835115060'
+  app/views/tasks/index.html.haml:8:in `ActionView::Template#render'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:145:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:161:in `ActionView::Template#instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:339:in `ActionView::Template#render'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:143:in `ActionView::TemplateRenderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in ActionView::TemplateRenderer#instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `ActionView::TemplateRenderer#instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `ActionView::TemplateRenderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:54:in `block in ActionView::TemplateRenderer#render_with_layout'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:62:in `ActionView::TemplateRenderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:53:in `ActionView::TemplateRenderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:17:in `ActionView::Renderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:42:in `ActionView::Renderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:23:in `TasksController#_render_template'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:99:in `TasksController#_render_template'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/streaming.rb:217:in `TasksController#render_to_body'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:82:in `TasksController#render_to_body'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:32:in `TasksController#render_to_body'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/renderers.rb:32:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/abstract_controller/rendering.rb:25:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:16:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in Benchmark.ms'
+  (gem) activesupport-4.1.6/lib/active_support/core_ext/benchmark.rb:12:in `block in Benchmark.realtime'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `Benchmark.ms'
+  (gem) activesupport-4.1.6/lib/active_support/core_ext/benchmark.rb:12:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:41:in `block in TasksController#cleanup_view_runtime'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:84:in `TasksController#cleanup_view_runtime'
+  (gem) activerecord-4.1.6/lib/active_record/railties/controller_runtime.rb:25:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:40:in `TasksController#default_render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/implicit_render.rb:10:in `TasksController#send_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/implicit_render.rb:5:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:189:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:10:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:20:in `block in ActiveSupport::Callbacks::Filters::End#call'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `TasksController#run_callbacks'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:19:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rescue.rb:29:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:31:in `block in TasksController#process'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in TasksController#process'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `TasksController#dispatch'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `TasksController#dispatch'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:30:in `TasksController.action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/params_wrapper.rb:250:in `ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+  (gem) activerecord-4.1.6/lib/active_record/railties/controller_runtime.rb:18:in `ActionDispatch::Routing::RouteSet::Dispatcher#call'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:136:in `ActionDispatch::Journey::Router#call'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:30:in `ActionDispatch::Journey::Router#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:196:in `ActionDispatch::Routing::RouteSet#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rack_delegation.rb:13:in `BetterErrors::Middleware#app_call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:232:in `block in BetterErrors::Middleware#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `Rack::ETag#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `Rack::ConditionalGet#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:50:in `Rack::Head#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:73:in `block in ActionDispatch::ParamsParser#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::Flash#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::Session::CookieStore#context'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:678:in `ActionDispatch::Session::CookieStore#call'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:20:in `ActionDispatch::Cookies#call'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:14:in `ActiveRecord::QueryCache#call'
+  (gem) rack-1.5.2/lib/rack/etag.rb:23:in `ActiveRecord::ConnectionAdapters::ConnectionManagement#call'
+  (gem) rack-1.5.2/lib/rack/conditionalget.rb:25:in `ActiveRecord::Migration::CheckPending#call'
+  (gem) rack-1.5.2/lib/rack/head.rb:11:in `ActionDispatch::Callbacks#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/params_parser.rb:27:in `ActionDispatch::Callbacks#run_callbacks'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/flash.rb:254:in `ActionDispatch::Callbacks#call'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `ActionDispatch::Reloader#call'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `ActionDispatch::RemoteIp#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/cookies.rb:560:in `ActionDispatch::DebugExceptions#call'
+  (gem) activerecord-4.1.6/lib/active_record/query_cache.rb:36:in `ActionDispatch::ShowExceptions#call'
+  (gem) activerecord-4.1.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `Rails::Rack::Logger#call_app'
+  (gem) activerecord-4.1.6/lib/active_record/migration.rb:380:in `Rails::Rack::Logger#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:29:in `block in ActiveSupport::Logger#tagged'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:82:in `ActiveSupport::Logger::SimpleFormatter#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:27:in `ActiveSupport::Logger#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/reloader.rb:73:in `Rails::Rack::Logger#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/remote_ip.rb:76:in `Rails::Rack::Logger#call_with_quiet_assets'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `ActionDispatch::RequestId#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/show_exceptions.rb:30:in `Rack::MethodOverride#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:38:in `Rack::Runtime#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `block in ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `block in Rack::Lock#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:26:in `ActionDispatch::Static#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `Rack::Sendfile#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `SimpleApp::Application#call'
+  (gem) quiet_assets-1.0.3/lib/quiet_assets.rb:23:in `SimpleApp::Application#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/request_id.rb:21:in `Rack::Lock#call'
+  (gem) rack-1.5.2/lib/rack/methodoverride.rb:21:in `Rack::ContentLength#call'
+  (gem) rack-1.5.2/lib/rack/runtime.rb:17:in `Rack::Handler::WEBrick#service'
+  (gem) activesupport-4.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `WEBrick::HTTPServer#service'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `WEBrick::HTTPServer#run'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/static.rb:64:in `WEBrick::HTTPServer#start_thread'
+  (gem) rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  (gem) railties-4.1.6/lib/rails/engine.rb:514:in `call'
+  (gem) railties-4.1.6/lib/rails/application.rb:144:in `call'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  (gem) rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+  (gem) rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70248835201520/variables" for 127.0.0.1 at 2014-11-07 04:05:00 +1300
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:05:08 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (15.0ms)
+  Rendered tasks/index.html.haml within layouts/application (17.8ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 413ms (Views: 412.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:06:01 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (14.9ms)
+  Rendered tasks/index.html.haml within layouts/application (17.6ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 416ms (Views: 415.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:06:26 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (24.8ms)
+  Rendered tasks/index.html.haml within layouts/application (26.7ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 423ms (Views: 422.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:06:33 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (2.3ms)
+  Rendered tasks/index.html.haml within layouts/application (4.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 426ms (Views: 424.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:06:51 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.6ms)
+  Rendered tasks/index.html.haml within layouts/application (3.5ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 404ms (Views: 403.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:07:31 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (24.8ms)
+  Rendered tasks/index.html.haml within layouts/application (26.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 422ms (Views: 420.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:10:59 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (2.7ms)
+  Rendered tasks/index.html.haml within layouts/application (4.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 424ms (Views: 423.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:11:38 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (2.9ms)
+  Rendered tasks/index.html.haml within layouts/application (4.8ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 406ms (Views: 404.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:12:09 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (6.4ms)
+  Rendered tasks/index.html.haml within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError - /Users/benji/rails-app/app/views/tasks/_task.html.haml:4: syntax error, unexpected ')'
+));}\n  <label for='task'>\n    #{_hamlout.adjust_tabs(1); 
+ ^
+/Users/benji/rails-app/app/views/tasks/_task.html.haml:4: syntax error, unexpected keyword_for, expecting keyword_do or '{' or '('
+));}\n  <label for='task'>\n    #{_hamlout.adjust_tabs(1); 
+                  ^
+/Users/benji/rails-app/app/views/tasks/_task.html.haml:4: syntax error, unexpected $undefined
+));}\n  <label for='task'>\n    #{_hamlout.adjust_tabs(1); 
+                           ^
+/Users/benji/rails-app/app/views/tasks/_task.html.haml:6: syntax error, unexpected '}', expecting ')'
+));}\n  </label>\n</div>\n<br>\n"...
+    ^
+/Users/benji/rails-app/app/views/tasks/_task.html.haml:6: unknown regexp options - dv
+/Users/benji/rails-app/app/views/tasks/_task.html.haml:6: syntax error, unexpected $undefined
+));}\n  </label>\n</div>\n<br>\n", -2, false);::Haml::...
+                         ^
+/Users/benji/rails-app/app/views/tasks/_task.html.haml:6: syntax error, unexpected $undefined
+...));}\n  </label>\n</div>\n<br>\n", -2, false);::Haml::Util.h...
+...                               ^
+/Users/benji/rails-app/app/views/tasks/_task.html.haml:6: unterminated string meets end of file
+/Users/benji/rails-app/app/views/tasks/_task.html.haml:6: syntax error, unexpected end-of-input, expecting ')':
+  (gem) actionview-4.1.6/lib/action_view/template.rb:297:in `ActionView::Template#compile'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:297:in `ActionView::Template#compile!'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:245:in `block (2 levels) in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:161:in `ActionView::Template#instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:339:in `ActionView::Template#compile!'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:244:in `block in ActionView::Template#compile!'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:232:in `ActionView::Template#render'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:232:in `ActiveSupport::Notifications.instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:144:in `block in ActionView::Template#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:161:in `ActionView::Template#render'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:339:in `ActionView::PartialRenderer#collection_with_template'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:143:in `ActionView::PartialRenderer#collection_with_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:399:in `block in ActionView::PartialRenderer#render_collection'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:395:in `ActionView::PartialRenderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:395:in `ActionView::PartialRenderer#instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:291:in `ActiveSupport::Notifications.instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:275:in `block in ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in ActionView::PartialRenderer#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `ActionView::PartialRenderer#render'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `ActionView::Renderer#render_partial'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `#<Class:0x007fc82b4617c0>#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:274:in `#<Class:0x007fc82b4617c0>#render_with_haml'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:47:in `#<Class:0x007fc82b4617c0>#non_haml'
+  (gem) actionview-4.1.6/lib/action_view/helpers/rendering_helper.rb:35:in `#<Class:0x007fc82b4617c0>#render_with_haml'
+  (gem) haml-4.0.5/lib/haml/helpers/action_view_mods.rb:10:in `block in #<Class:0x007fc82b4617c0>#_app_views_tasks_index_html_haml__3760800573966817371_70248835115060'
+  (gem) haml-4.0.5/lib/haml/helpers.rb:89:in `ActionView::Template#render'
+  (gem) haml-4.0.5/lib/haml/helpers/action_view_mods.rb:10:in `ActiveSupport::Notifications.instrument'
+  app/views/tasks/index.html.haml:8:in `ActionView::Template#instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:145:in `block in ActionView::Template#render'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:161:in `ActionView::TemplateRenderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:339:in `ActionView::TemplateRenderer#instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:143:in `ActiveSupport::Notifications.instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in ActionView::TemplateRenderer#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `ActionView::TemplateRenderer#render_template'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `ActionView::TemplateRenderer#render_with_layout'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `ActionView::TemplateRenderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:54:in `block in ActionView::TemplateRenderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:62:in `ActionView::Renderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:53:in `ActionView::Renderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:17:in `TasksController#_render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:42:in `TasksController#_render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:23:in `TasksController#render_to_body'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:99:in `TasksController#render_to_body'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/streaming.rb:217:in `TasksController#render_to_body'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:82:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:32:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/renderers.rb:32:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/abstract_controller/rendering.rb:25:in `Benchmark.ms'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:16:in `Benchmark.realtime'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in Benchmark.ms'
+  (gem) activesupport-4.1.6/lib/active_support/core_ext/benchmark.rb:12:in `block in TasksController#render'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `TasksController#cleanup_view_runtime'
+  (gem) activesupport-4.1.6/lib/active_support/core_ext/benchmark.rb:12:in `TasksController#cleanup_view_runtime'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:41:in `block in TasksController#render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:84:in `TasksController#default_render'
+  (gem) activerecord-4.1.6/lib/active_record/railties/controller_runtime.rb:25:in `TasksController#send_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:40:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/implicit_render.rb:10:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/implicit_render.rb:5:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:189:in `ActiveSupport::Callbacks::Filters::End#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:10:in `ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:20:in `block in ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `TasksController#run_callbacks'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:19:in `TasksController#process'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rescue.rb:29:in `TasksController#process'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:31:in `block in TasksController#dispatch'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in TasksController#dispatch'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `TasksController.action'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:30:in `ActionDispatch::Routing::RouteSet::Dispatcher#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/params_wrapper.rb:250:in `ActionDispatch::Journey::Router#call'
+  (gem) activerecord-4.1.6/lib/active_record/railties/controller_runtime.rb:18:in `ActionDispatch::Journey::Router#call'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:136:in `ActionDispatch::Routing::RouteSet#call'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:30:in `BetterErrors::Middleware#app_call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:196:in `BetterErrors::Middleware#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rack_delegation.rb:13:in `Rack::ETag#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:232:in `block in Rack::ConditionalGet#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `Rack::Head#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `ActionDispatch::ParamsParser#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:50:in `ActionDispatch::Flash#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:73:in `block in ActionDispatch::Session::CookieStore#context'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::Session::CookieStore#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::Cookies#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:678:in `ActiveRecord::QueryCache#call'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:20:in `ActiveRecord::ConnectionAdapters::ConnectionManagement#call'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:14:in `ActiveRecord::Migration::CheckPending#call'
+  (gem) rack-1.5.2/lib/rack/etag.rb:23:in `ActionDispatch::Callbacks#call'
+  (gem) rack-1.5.2/lib/rack/conditionalget.rb:25:in `ActionDispatch::Callbacks#run_callbacks'
+  (gem) rack-1.5.2/lib/rack/head.rb:11:in `ActionDispatch::Callbacks#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/params_parser.rb:27:in `ActionDispatch::Reloader#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/flash.rb:254:in `ActionDispatch::RemoteIp#call'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `ActionDispatch::DebugExceptions#call'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `ActionDispatch::ShowExceptions#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/cookies.rb:560:in `Rails::Rack::Logger#call_app'
+  (gem) activerecord-4.1.6/lib/active_record/query_cache.rb:36:in `Rails::Rack::Logger#call'
+  (gem) activerecord-4.1.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `ActiveSupport::Logger#tagged'
+  (gem) activerecord-4.1.6/lib/active_record/migration.rb:380:in `ActiveSupport::Logger::SimpleFormatter#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:29:in `block in ActiveSupport::Logger#tagged'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:82:in `Rails::Rack::Logger#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:27:in `Rails::Rack::Logger#call_with_quiet_assets'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/reloader.rb:73:in `ActionDispatch::RequestId#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/remote_ip.rb:76:in `Rack::MethodOverride#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `Rack::Runtime#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/show_exceptions.rb:30:in `ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:38:in `Rack::Lock#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `block in ActionDispatch::Static#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `block in Rack::Sendfile#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:26:in `SimpleApp::Application#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `SimpleApp::Application#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `Rack::Lock#call'
+  (gem) quiet_assets-1.0.3/lib/quiet_assets.rb:23:in `Rack::ContentLength#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/request_id.rb:21:in `Rack::Handler::WEBrick#service'
+  (gem) rack-1.5.2/lib/rack/methodoverride.rb:21:in `WEBrick::HTTPServer#service'
+  (gem) rack-1.5.2/lib/rack/runtime.rb:17:in `WEBrick::HTTPServer#run'
+  (gem) activesupport-4.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `WEBrick::HTTPServer#start_thread'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/static.rb:64:in `call'
+  (gem) rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  (gem) railties-4.1.6/lib/rails/engine.rb:514:in `call'
+  (gem) railties-4.1.6/lib/rails/application.rb:144:in `call'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  (gem) rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+  (gem) rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70248864465940/variables" for 127.0.0.1 at 2014-11-07 04:12:10 +1300
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:12:21 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (2.2ms)
+  Rendered tasks/index.html.haml within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 6ms
+
+ArgumentError - wrong number of arguments (0 for 1..4):
+  (gem) actionview-4.1.6/lib/action_view/helpers/form_tag_helper.rb:358:in `#<Class:0x007fc82b4617c0>#_app_views_tasks__task_html_haml___3283176217055632244_70248836131220'
+  app/views/tasks/_task.html.haml:3:in `ActionView::Template#render'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:145:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:161:in `ActionView::Template#instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:339:in `ActionView::Template#render'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:143:in `ActionView::PartialRenderer#collection_with_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:399:in `block in ActionView::PartialRenderer#collection_with_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:395:in `ActionView::PartialRenderer#render_collection'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:395:in `ActionView::PartialRenderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:291:in `ActionView::PartialRenderer#instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:275:in `block in ActiveSupport::Notifications.instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `block in ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `ActionView::PartialRenderer#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `ActionView::PartialRenderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `ActionView::Renderer#render_partial'
+  (gem) actionview-4.1.6/lib/action_view/renderer/partial_renderer.rb:274:in `#<Class:0x007fc82b4617c0>#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:47:in `#<Class:0x007fc82b4617c0>#render_with_haml'
+  (gem) actionview-4.1.6/lib/action_view/helpers/rendering_helper.rb:35:in `#<Class:0x007fc82b4617c0>#non_haml'
+  (gem) haml-4.0.5/lib/haml/helpers/action_view_mods.rb:10:in `block in #<Class:0x007fc82b4617c0>#render_with_haml'
+  (gem) haml-4.0.5/lib/haml/helpers.rb:89:in `#<Class:0x007fc82b4617c0>#_app_views_tasks_index_html_haml__3760800573966817371_70248835115060'
+  (gem) haml-4.0.5/lib/haml/helpers/action_view_mods.rb:10:in `ActionView::Template#render'
+  app/views/tasks/index.html.haml:8:in `ActiveSupport::Notifications.instrument'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:145:in `block in ActionView::Template#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:161:in `ActionView::Template#render'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:339:in `ActionView::TemplateRenderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/template.rb:143:in `ActionView::TemplateRenderer#instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in ActiveSupport::Notifications.instrument'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `block in ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `ActionView::TemplateRenderer#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `ActionView::TemplateRenderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/abstract_renderer.rb:38:in `ActionView::TemplateRenderer#render_with_layout'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:54:in `block in ActionView::TemplateRenderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:62:in `ActionView::TemplateRenderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:53:in `ActionView::Renderer#render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/template_renderer.rb:17:in `ActionView::Renderer#render'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:42:in `TasksController#_render_template'
+  (gem) actionview-4.1.6/lib/action_view/renderer/renderer.rb:23:in `TasksController#_render_template'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:99:in `TasksController#render_to_body'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/streaming.rb:217:in `TasksController#render_to_body'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:82:in `TasksController#render_to_body'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:32:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/renderers.rb:32:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/abstract_controller/rendering.rb:25:in `TasksController#render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:16:in `Benchmark.ms'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in Benchmark.realtime'
+  (gem) activesupport-4.1.6/lib/active_support/core_ext/benchmark.rb:12:in `block in Benchmark.ms'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `TasksController#render'
+  (gem) activesupport-4.1.6/lib/active_support/core_ext/benchmark.rb:12:in `TasksController#cleanup_view_runtime'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:41:in `block in TasksController#cleanup_view_runtime'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:84:in `TasksController#render'
+  (gem) activerecord-4.1.6/lib/active_record/railties/controller_runtime.rb:25:in `TasksController#default_render'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:40:in `TasksController#send_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/implicit_render.rb:10:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/implicit_render.rb:5:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:189:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rendering.rb:10:in `ActiveSupport::Callbacks::Filters::End#call'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:20:in `block in ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::After.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:113:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `ActiveSupport::Callbacks::Filters::Before.halting'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:229:in `block in TasksController#run_callbacks'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `ActiveSupport::Notifications::Instrumenter#instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:166:in `block in ActiveSupport::Notifications.instrument'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `TasksController#process_action'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:86:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/abstract_controller/callbacks.rb:19:in `TasksController#process_action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rescue.rb:29:in `TasksController#process'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:31:in `block in TasksController#process'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `block in TasksController#dispatch'
+  (gem) activesupport-4.1.6/lib/active_support/notifications/instrumenter.rb:20:in `TasksController#dispatch'
+  (gem) activesupport-4.1.6/lib/active_support/notifications.rb:159:in `TasksController.action'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/instrumentation.rb:30:in `ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/params_wrapper.rb:250:in `ActionDispatch::Routing::RouteSet::Dispatcher#call'
+  (gem) activerecord-4.1.6/lib/active_record/railties/controller_runtime.rb:18:in `ActionDispatch::Journey::Router#call'
+  (gem) actionpack-4.1.6/lib/abstract_controller/base.rb:136:in `ActionDispatch::Journey::Router#call'
+  (gem) actionview-4.1.6/lib/action_view/rendering.rb:30:in `ActionDispatch::Routing::RouteSet#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:196:in `BetterErrors::Middleware#app_call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal/rack_delegation.rb:13:in `BetterErrors::Middleware#call'
+  (gem) actionpack-4.1.6/lib/action_controller/metal.rb:232:in `block in Rack::ETag#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `Rack::ConditionalGet#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:82:in `Rack::Head#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:50:in `ActionDispatch::ParamsParser#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:73:in `block in ActionDispatch::Flash#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::Session::CookieStore#context'
+  (gem) actionpack-4.1.6/lib/action_dispatch/journey/router.rb:59:in `ActionDispatch::Session::CookieStore#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/routing/route_set.rb:678:in `ActionDispatch::Cookies#call'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:20:in `ActiveRecord::QueryCache#call'
+  (gem) better_errors-0.0.8/lib/better_errors/middleware.rb:14:in `ActiveRecord::ConnectionAdapters::ConnectionManagement#call'
+  (gem) rack-1.5.2/lib/rack/etag.rb:23:in `ActiveRecord::Migration::CheckPending#call'
+  (gem) rack-1.5.2/lib/rack/conditionalget.rb:25:in `ActionDispatch::Callbacks#call'
+  (gem) rack-1.5.2/lib/rack/head.rb:11:in `ActionDispatch::Callbacks#run_callbacks'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/params_parser.rb:27:in `ActionDispatch::Callbacks#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/flash.rb:254:in `ActionDispatch::Reloader#call'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `ActionDispatch::RemoteIp#call'
+  (gem) rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `ActionDispatch::DebugExceptions#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/cookies.rb:560:in `ActionDispatch::ShowExceptions#call'
+  (gem) activerecord-4.1.6/lib/active_record/query_cache.rb:36:in `Rails::Rack::Logger#call_app'
+  (gem) activerecord-4.1.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `Rails::Rack::Logger#call'
+  (gem) activerecord-4.1.6/lib/active_record/migration.rb:380:in `ActiveSupport::Logger#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:29:in `block in ActiveSupport::Logger::SimpleFormatter#tagged'
+  (gem) activesupport-4.1.6/lib/active_support/callbacks.rb:82:in `ActiveSupport::Logger#tagged'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/callbacks.rb:27:in `Rails::Rack::Logger#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/reloader.rb:73:in `Rails::Rack::Logger#call_with_quiet_assets'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/remote_ip.rb:76:in `ActionDispatch::RequestId#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `Rack::MethodOverride#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/show_exceptions.rb:30:in `Rack::Runtime#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:38:in `ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `block in Rack::Lock#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `block in ActionDispatch::Static#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:26:in `Rack::Sendfile#call'
+  (gem) activesupport-4.1.6/lib/active_support/tagged_logging.rb:68:in `SimpleApp::Application#call'
+  (gem) railties-4.1.6/lib/rails/rack/logger.rb:20:in `SimpleApp::Application#call'
+  (gem) quiet_assets-1.0.3/lib/quiet_assets.rb:23:in `Rack::Lock#call'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/request_id.rb:21:in `Rack::ContentLength#call'
+  (gem) rack-1.5.2/lib/rack/methodoverride.rb:21:in `Rack::Handler::WEBrick#service'
+  (gem) rack-1.5.2/lib/rack/runtime.rb:17:in `WEBrick::HTTPServer#service'
+  (gem) activesupport-4.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `WEBrick::HTTPServer#run'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `WEBrick::HTTPServer#start_thread'
+  (gem) actionpack-4.1.6/lib/action_dispatch/middleware/static.rb:64:in `call'
+  (gem) rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  (gem) railties-4.1.6/lib/rails/engine.rb:514:in `call'
+  (gem) railties-4.1.6/lib/rails/application.rb:144:in `call'
+  (gem) rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  (gem) rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+  (gem) rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/benji/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70248836015280/variables" for 127.0.0.1 at 2014-11-07 04:12:21 +1300
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:12:28 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (2.9ms)
+  Rendered tasks/index.html.haml within layouts/application (4.6ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 401ms (Views: 399.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:12:48 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (2.6ms)
+  Rendered tasks/index.html.haml within layouts/application (4.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 425ms (Views: 401.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:13:35 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (2.4ms)
+  Rendered tasks/index.html.haml within layouts/application (4.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 427ms (Views: 426.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:14:10 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (2.8ms)
+  Rendered tasks/index.html.haml within layouts/application (4.8ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 402ms (Views: 400.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:14:41 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (3.0ms)
+  Rendered tasks/index.html.haml within layouts/application (5.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 410ms (Views: 409.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:15:02 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.8ms)
+  Rendered tasks/index.html.haml within layouts/application (3.5ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 535ms (Views: 534.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:15:14 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.5ms)
+  Rendered tasks/index.html.haml within layouts/application (3.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 546ms (Views: 544.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:15:21 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.6ms)
+  Rendered tasks/index.html.haml within layouts/application (3.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 515ms (Views: 514.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:15:53 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.9ms)
+  Rendered tasks/index.html.haml within layouts/application (3.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 524ms (Views: 523.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:16:06 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.8ms)
+  Rendered tasks/index.html.haml within layouts/application (3.5ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 529ms (Views: 528.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:16:14 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.7ms)
+  Rendered tasks/index.html.haml within layouts/application (3.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 530ms (Views: 529.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:16:37 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.7ms)
+  Rendered tasks/index.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 526ms (Views: 524.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:16:50 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.7ms)
+  Rendered tasks/index.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 526ms (Views: 524.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:17:06 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.8ms)
+  Rendered tasks/index.html.haml within layouts/application (3.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 532ms (Views: 531.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:17:16 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.8ms)
+  Rendered tasks/index.html.haml within layouts/application (3.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 525ms (Views: 523.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:17:25 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.7ms)
+  Rendered tasks/index.html.haml within layouts/application (3.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 531ms (Views: 530.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 04:17:47 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (59.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 464ms (Views: 462.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2014-11-07 04:18:30 +1300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rg40IW8UhwkRgIaz4vUDCM4xv2259CqzjyMLGsl0y1s=", "task"=>{"description"=>"This is a very long task and as such it will be kind of long. But no fake long words that don't wrap well. Well, okay, maybe one.  Exacalibericiousbahiot."}, "commit"=>"Add"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tasks" ("created_at", "description", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-11-06 15:18:30.203837"], ["description", "This is a very long task and as such it will be kind of long. But no fake long words that don't wrap well. Well, okay, maybe one.  Exacalibericiousbahiot."], ["updated_at", "2014-11-06 15:18:30.203837"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3001/tasks/20
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tasks/20" for 127.0.0.1 at 2014-11-07 04:18:30 +1300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 20]]
+  Rendered tasks/show.html.haml within layouts/application (1.1ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 407ms (Views: 405.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:18:36 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.9ms)
+  Rendered tasks/index.html.haml within layouts/application (3.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 423ms (Views: 422.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:19:20 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.8ms)
+  Rendered tasks/index.html.haml within layouts/application (3.5ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 538ms (Views: 537.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:19:29 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (2.0ms)
+  Rendered tasks/index.html.haml within layouts/application (3.7ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 545ms (Views: 544.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:19:40 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.9ms)
+  Rendered tasks/index.html.haml within layouts/application (3.5ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 542ms (Views: 541.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:20:00 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.8ms)
+  Rendered tasks/index.html.haml within layouts/application (3.5ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 531ms (Views: 530.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:20:06 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.7ms)
+  Rendered tasks/index.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 534ms (Views: 532.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:21:14 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (3.0ms)
+  Rendered tasks/index.html.haml within layouts/application (4.8ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 433ms (Views: 432.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:22:54 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (3.3ms)
+  Rendered tasks/index.html.haml within layouts/application (5.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 416ms (Views: 415.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:23:09 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (3.0ms)
+  Rendered tasks/index.html.haml within layouts/application (4.7ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 407ms (Views: 406.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:23:18 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (3.0ms)
+  Rendered tasks/index.html.haml within layouts/application (4.7ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 431ms (Views: 430.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:24:45 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.9ms)
+  Rendered tasks/index.html.haml within layouts/application (4.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 534ms (Views: 533.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:24:56 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.9ms)
+  Rendered tasks/index.html.haml within layouts/application (3.6ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 612ms (Views: 611.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:25:33 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (1.9ms)
+  Rendered tasks/index.html.haml within layouts/application (3.7ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 509ms (Views: 508.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:25:52 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.9ms)
+  Rendered tasks/index.html.haml within layouts/application (3.6ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 528ms (Views: 527.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:26:41 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (2.0ms)
+  Rendered tasks/index.html.haml within layouts/application (3.6ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 533ms (Views: 532.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:26:49 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (1.8ms)
+  Rendered tasks/index.html.haml within layouts/application (3.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 537ms (Views: 536.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-07 04:27:14 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (2.0ms)
+  Rendered tasks/index.html.haml within layouts/application (3.7ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 539ms (Views: 538.6ms | ActiveRecord: 0.2ms)

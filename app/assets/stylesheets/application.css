@@ -28,3 +28,17 @@
   max-width: 600px;
   margin: 0 auto;
 }
+
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.listall {
+  margin-left: 5%;
+}
+
+.ui.checkbox {
+  line-height: 1.3;
+}
+

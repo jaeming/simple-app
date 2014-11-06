@@ -1,0 +1,7 @@
+%br
+.ui.huge.checkbox.listall
+  = check_box_tag "task-#{task.id}"
+  %label{:for => "task-#{task.id}"}
+    = task.description
+%br
+%br
