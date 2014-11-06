@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  background: #FFFFFF;
+  background: #FCFCFC;
   margin: 0px;
   padding: 0px;
   color: #555555;
@@ -22,3 +22,11 @@ body {
 .icon {
   color: #fff;
 }
+
+.ui.inverted.segment, .ui.primary.inverted.segment {
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+

@@ -1,9 +1,26 @@
 source 'https://rubygems.org'
 
 group :test do
-  gem 'rspec-rails', '~> 3.1.0'
+  gem 'rspec-rails'
   gem 'capybara'
 end
+
+group :development do
+  gem 'pry'
+  gem 'rails_layout'
+  gem 'sqlite3'
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem 'did_you_mean'
+  gem 'quiet_assets'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+gem 'unicorn'
 
 gem 'normalize-rails', '~> 3.0.1'
 
@@ -11,10 +28,11 @@ gem 'semantic-ui-sass', '~> 0.19.3.0'
 
 gem "haml-rails"
 
+gem 'simple_form'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

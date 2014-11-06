@@ -1,0 +1,329 @@
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-06 23:45:44 +1300
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-06 23:48:32 +1300
+Processing by TasksController#new as HTML
+Completed 500 Internal Server Error in 14ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-06 23:49:35 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 249348ms (Views: 249340.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-06 23:53:56 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 169ms (Views: 161.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:06:41 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 52ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:08:04 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (37.3ms)
+Completed 200 OK in 268ms (Views: 259.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:08:46 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (36.6ms)
+Completed 200 OK in 175ms (Views: 167.3ms | ActiveRecord: 0.2ms)
+Started POST "/tasks" for 127.0.0.1 at 2014-11-07 00:08:46 +1300
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:09:23 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (36.6ms)
+Completed 200 OK in 175ms (Views: 167.0ms | ActiveRecord: 0.2ms)
+Started POST "/tasks" for 127.0.0.1 at 2014-11-07 00:09:23 +1300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"Get a perm at my favorite salon"}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 3ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:11:39 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 176ms (Views: 168.0ms | ActiveRecord: 0.2ms)
+Started POST "/tasks" for 127.0.0.1 at 2014-11-07 00:11:39 +1300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"Get a perm at my favorite salon"}, "commit"=>"Save"}
+Completed 400 Bad Request in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:12:03 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 174ms (Views: 166.4ms | ActiveRecord: 0.2ms)
+Started POST "/tasks" for 127.0.0.1 at 2014-11-07 00:12:03 +1300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"Get a perm at my favorite salon"}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 3ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:13:39 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 175ms (Views: 166.7ms | ActiveRecord: 0.2ms)
+Started POST "/tasks" for 127.0.0.1 at 2014-11-07 00:13:39 +1300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"Get a perm at my favorite salon"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("created_at", "description", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-06 11:13:39.456665"], ["description", "Get a perm at my favorite salon"], ["updated_at", "2014-11-06 11:13:39.456665"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to 
+Completed 500 Internal Server Error in 7ms
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:14:31 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 175ms (Views: 167.0ms | ActiveRecord: 0.2ms)
+Started POST "/tasks" for 127.0.0.1 at 2014-11-07 00:14:31 +1300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"Get a perm at my favorite salon"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("created_at", "description", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-06 11:14:31.616366"], ["description", "Get a perm at my favorite salon"], ["updated_at", "2014-11-06 11:14:31.616366"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/tasks/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/tasks/1" for 127.0.0.1 at 2014-11-07 00:14:31 +1300
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:15:11 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 177ms (Views: 169.2ms | ActiveRecord: 0.2ms)
+Started POST "/tasks" for 127.0.0.1 at 2014-11-07 00:15:11 +1300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"Get a perm at my favorite salon"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("created_at", "description", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-06 11:15:11.285779"], ["description", "Get a perm at my favorite salon"], ["updated_at", "2014-11-06 11:15:11.285779"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/tasks/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/tasks/1" for 127.0.0.1 at 2014-11-07 00:15:11 +1300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 3ms
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:15:48 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 176ms (Views: 167.6ms | ActiveRecord: 0.2ms)
+Started POST "/tasks" for 127.0.0.1 at 2014-11-07 00:15:48 +1300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"Get a perm at my favorite salon"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("created_at", "description", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-06 11:15:48.322739"], ["description", "Get a perm at my favorite salon"], ["updated_at", "2014-11-06 11:15:48.322739"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/tasks/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/tasks/1" for 127.0.0.1 at 2014-11-07 00:15:48 +1300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered tasks/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:16:32 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (113.7ms)
+Completed 200 OK in 312ms (Views: 303.5ms | ActiveRecord: 0.2ms)
+Started POST "/tasks" for 127.0.0.1 at 2014-11-07 00:16:33 +1300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"Get a perm at my favorite salon"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("created_at", "description", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-06 11:16:33.030535"], ["description", "Get a perm at my favorite salon"], ["updated_at", "2014-11-06 11:16:33.030535"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/tasks/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/tasks/1" for 127.0.0.1 at 2014-11-07 00:16:33 +1300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered tasks/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:18:28 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (25.0ms)
+Completed 200 OK in 220ms (Views: 211.7ms | ActiveRecord: 0.2ms)
+Started POST "/tasks" for 127.0.0.1 at 2014-11-07 00:18:28 +1300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"Get a perm at my favorite salon"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("created_at", "description", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-06 11:18:28.813030"], ["description", "Get a perm at my favorite salon"], ["updated_at", "2014-11-06 11:18:28.813030"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/tasks/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/tasks/1" for 127.0.0.1 at 2014-11-07 00:18:28 +1300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered tasks/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:22:59 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (25.6ms)
+Completed 200 OK in 224ms (Views: 216.2ms | ActiveRecord: 0.2ms)
+Started POST "/tasks" for 127.0.0.1 at 2014-11-07 00:22:59 +1300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"Get a perm at my favorite salon"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("created_at", "description", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-06 11:22:59.989554"], ["description", "Get a perm at my favorite salon"], ["updated_at", "2014-11-06 11:22:59.989554"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/tasks/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/tasks/1" for 127.0.0.1 at 2014-11-07 00:22:59 +1300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered tasks/show.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:52:36 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (91.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:53:07 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (26.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:56:17 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (25.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 00:57:50 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (26.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 01:30:37 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (26.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 01:33:19 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (26.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 01:35:02 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (26.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 01:35:33 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (26.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 01:36:29 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (26.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 01:40:45 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (51.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 01:53:17 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (53.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 01:53:55 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (53.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 01:54:20 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (53.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 01:54:42 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (53.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 01:55:21 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (53.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 01:57:59 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (50.9ms)
+  Rendered layouts/_messages.html.haml (2.4ms)
+Completed 200 OK in 244472ms (Views: 244463.9ms | ActiveRecord: 0.2ms)
+Started POST "/tasks" for 127.0.0.1 at 2014-11-07 02:02:04 +1300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"Get a perm at my favorite salon"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("created_at", "description", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-06 13:02:04.128407"], ["description", "Get a perm at my favorite salon"], ["updated_at", "2014-11-06 13:02:04.128407"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/tasks/1
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+Started GET "/tasks/1" for 127.0.0.1 at 2014-11-07 02:02:04 +1300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks"  WHERE "tasks"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered tasks/show.html.haml within layouts/application (1.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-07 02:04:28 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (49.1ms)
+  Rendered layouts/_messages.html.haml (1.2ms)
+Completed 200 OK in 209ms (Views: 200.0ms | ActiveRecord: 0.2ms)
+Started POST "/tasks" for 127.0.0.1 at 2014-11-07 02:04:28 +1300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"Get a perm at my favorite salon"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("created_at", "description", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-06 13:04:28.222144"], ["description", "Get a perm at my favorite salon"], ["updated_at", "2014-11-06 13:04:28.222144"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/tasks/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/tasks/1" for 127.0.0.1 at 2014-11-07 02:04:28 +1300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks"  WHERE "tasks"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered tasks/show.html.haml within layouts/application (1.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m

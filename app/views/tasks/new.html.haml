@@ -1,0 +1,15 @@
+%br
+.medium-container
+  %h2.ui.header
+    %i.edit.icon.circular.inverted.teal
+    Add Task
+  .ui.fluid.form.segment
+    = simple_form_for @task do |f|
+      .one.field
+        .field
+          = f.text_field :description, placeholder: 'Description'
+          = f.full_error :description, class: "validation"
+        %div
+          = f.submit 'Add', class: 'ui teal submit button'
+
+

@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title SimpleApp
+    %title 7 day list
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
@@ -11,15 +11,22 @@
       .ui.one.column.page.grid
         %a.item
           %i.sun.icon
-          Benji Dalton
+          Simple Tasks
         .right.menu
           %a.active.item
             %i.home.icon
             Home
           %a.item
             %i.mail.icon
-            Contact
+            Profile
           %a.item
             %i.lab.icon
-            Stuff
-    = yield
+            About
+    .ui.one.column.page.grid
+      .column
+        = render 'layouts/messages'
+        = yield
+        %script
+          $(function() {
+          setTimeout( "$('.message').fadeOut();",1200 );
+          });

@@ -1,0 +1,8 @@
+- if flash[:notice]
+  .ui.primary.inverted.teal.segment.message
+    %p
+      = flash[:notice]
+- elsif flash[:error]
+  .ui.primary.inverted.red.segment.message
+    %p
+      = flash[:error]
