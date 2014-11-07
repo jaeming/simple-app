@@ -82536,3 +82536,75 @@ Processing by TasksController#index as HTML
   Rendered tasks/index.html.haml within layouts/application (4.6ms)
   Rendered layouts/_messages.html.haml (0.1ms)
 Completed 200 OK in 430ms (Views: 429.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-08 05:27:57 +1300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (2.2ms)
+  Rendered layouts/_messages.html.haml (1.1ms)
+Completed 200 OK in 750ms (Views: 741.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-08 05:28:04 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (3.8ms)
+  Rendered tasks/index.html.haml within layouts/application (9.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 422ms (Views: 420.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/27" for 127.0.0.1 at 2014-11-08 05:28:08 +1300
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Rg40IW8UhwkRgIaz4vUDCM4xv2259CqzjyMLGsl0y1s=", "id"=>"27"}
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 27]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 27]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3001/tasks
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2014-11-08 05:28:08 +1300
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.haml (2.2ms)
+  Rendered tasks/index.html.haml within layouts/application (3.8ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 449ms (Views: 448.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2014-11-08 05:29:03 +1300
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.haml (2.2ms)
+  Rendered tasks/index.html.haml within layouts/application (3.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 415ms (Views: 414.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2014-11-08 05:29:03 +1300
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.haml within layouts/application (116.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 532ms (Views: 530.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2014-11-08 05:29:20 +1300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rg40IW8UhwkRgIaz4vUDCM4xv2259CqzjyMLGsl0y1s=", "task"=>{"description"=>"Commit and push to github"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("created_at", "description", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-11-07 16:29:20.030106"], ["description", "Commit and push to github"], ["updated_at", "2014-11-07 16:29:20.030106"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3001/tasks/32
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/tasks/32" for 127.0.0.1 at 2014-11-08 05:29:20 +1300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks"  WHERE "tasks"."id" = ? LIMIT 1  [["id", 32]]
+  Rendered tasks/show.html.haml within layouts/application (35.7ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 443ms (Views: 441.5ms | ActiveRecord: 0.1ms)
