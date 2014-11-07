@@ -10,11 +10,23 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
+
     if @task.save
       redirect_to @task, notice: 'Task added!'
     else
       flash[:error] = "An error occurred."
       render :new
+    end
+  end
+
+  def destroy
+    @task = Task.find(params[:id])
+
+    if @task.destroy
+      redirect_to tasks_path, notice: 'Task complete!'
+    else
+      flash[:error] = "Something went wrong. Try again."
+      render :index
     end
   end
 

@@ -1,7 +1,9 @@
-%br
-.ui.huge.checkbox.listall
-  = check_box_tag "task-#{task.id}"
-  %label{:for => "task-#{task.id}"}
-    = task.description
-%br
-%br
+.all-tasks
+  %li.task-list
+    = link_to task, id: "task-#{task.id}", class: 'tasks', method: :delete do
+      .checkbox-container
+        %i.empty.checkbox.large.icon
+        %i.checkmark.sign.large.icon
+    %p.task-font
+      = task.description
+
