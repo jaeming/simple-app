@@ -93,6 +93,14 @@ small.light {
   padding-left: 40px;
 }
 
+.best_in_place {
+  transition: all 500ms ease;
+}
+
+.best_in_place:hover {
+  background: #fff8f7;
+}
+
 
 
 

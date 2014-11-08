@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  resources :tasks, only: [:new, :create, :show, :index, :destroy]
+  resources :tasks, only: [:new, :create, :show, :index, :destroy, :edit, :update]
 
   root 'home#index'
 

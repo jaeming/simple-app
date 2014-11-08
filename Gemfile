@@ -22,6 +22,7 @@ group :production do
   gem 'rails_12factor'
 end
 
+
 gem 'whenever', :require => false
 
 gem 'unicorn'
@@ -33,6 +34,8 @@ gem 'semantic-ui-sass', '~> 0.19.3.0'
 gem "haml-rails"
 
 gem 'simple_form'
+
+gem 'best_in_place'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'

@@ -2,7 +2,5 @@
 .medium-container
   %h2.ui.header
     %i.edit.icon.circular.inverted.teal
-    Add Task
-  = render partial: "form"
-
-
+    Edit Task
+  = render partial: "form", locals: { task: @task }
