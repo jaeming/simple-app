@@ -22,6 +22,8 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'whenever', :require => false
+
 gem 'unicorn'
 
 gem 'normalize-rails', '~> 3.0.1'

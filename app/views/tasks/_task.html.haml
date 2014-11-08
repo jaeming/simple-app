@@ -6,4 +6,7 @@
         %i.checkmark.sign.large.icon
     %p.task-font
       = task.description
-
+      &nbsp;
+    %small.light
+      = time_ago_in_words(task.created_at + 7.days)
+      to go

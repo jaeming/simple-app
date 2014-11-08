@@ -84,6 +84,13 @@ a {
 .task-font {
   padding-left: 40px;
   font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+small.light {
+  font-size: .7rem;
+  color: grey;
+  padding-left: 40px;
 }
 
 
