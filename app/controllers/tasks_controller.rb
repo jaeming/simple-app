@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  respond_to :html, :json
+  respond_to :html, :json, :js
 
   def index
     @tasks = Task.all
@@ -41,13 +41,18 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-    # if @task.update_attributes(task_params)
+    if @task.update_attributes(task_params)
+      # flash[:notice] = "Task updated"
       # redirect_to @task
-    # else
-    #   flash[:error] = "there was an error. Try again"
+    else
+      flash[:error] = "there was an error. Try again"
       # render :edit
+    end
+
+    respond_with(@task)
+    # do |format|
+    #   format.html { redirect_to tasks_path }
     # end
-    respond_with @task
   end
 
   private

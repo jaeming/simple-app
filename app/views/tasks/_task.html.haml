@@ -6,7 +6,8 @@
         %i.checkmark.sign.large.icon
     %p.task-font
       = best_in_place task, :description
-      &nbsp;
+      = link_to edit_task_path do
+        %i.ui.edit.icon
     %small.light
       = time_ago_in_words(task.created_at + 7.days)
       to go
