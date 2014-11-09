@@ -1,13 +1,14 @@
 .all-tasks
   %li.task-list
-    = link_to task, id: "task-#{task.id}", class: 'tasks', method: :delete do
-      .checkbox-container
-        %i.empty.checkbox.large.icon
-        %i.checkmark.sign.large.icon
-    %p.task-font
-      = best_in_place task, :description
-      = link_to edit_task_path(task) do
-        %i.ui.edit.icon
-    %small.light
-      = time_ago_in_words(task.created_at + 7.days)
-      to go
+    = content_tag :div, id: "task-#{task.id}" do
+      = link_to task, class: 'tasks', method: :delete, remote: true do
+        .checkbox-container
+          %i.empty.checkbox.large.icon
+          %i.checkmark.sign.large.icon
+      %p.task-font
+        = best_in_place task, :description
+        = link_to edit_task_path(task), class: 'task-icon-edit' do
+          %i.ui.edit.icon
+      %small.light
+        = time_ago_in_words(task.created_at + 7.days)
+        to go

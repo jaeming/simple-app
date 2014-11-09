@@ -18,7 +18,7 @@
 
 a {
   text-decoration: none;
-  color: tomato;
+  color: #E28585;
 }
 
 .validation {
@@ -60,7 +60,7 @@ a {
 .tasks i.empty.checkbox.large.icon {
   position: absolute;
   margin-top: 3px;
-  color: #f98e8e;
+  color: #878787;
 }
 
 .tasks i.empty.checkbox.large.icon:hover {
@@ -81,6 +81,8 @@ a {
   margin-top: 3px;
 }
 
+
+
 .task-font {
   padding-left: 40px;
   font-size: 1.1rem;
@@ -99,6 +101,16 @@ small.light {
 
 .best_in_place:hover {
   background: #fff8f7;
+}
+
+.task-icon-edit {
+  margin-left: 4px;
+  color: #939393;
+  transition: all 500ms ease;
+}
+
+.task-icon-edit:hover {
+  color: #FF6347;
 }
 
 

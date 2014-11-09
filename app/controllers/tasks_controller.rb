@@ -24,12 +24,15 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
 
     if @task.destroy
-      redirect_to tasks_path, notice: 'Task complete!'
+      flash[:notice] = "Task complete!"
     else
       flash[:error] = "Something went wrong. Try again."
-      render :index
     end
+
+    respond_with(@task) do |format|
+      format.html { redirect_to tasks_path }
   end
+end
 
   def show
     @task = Task.find params[:id]
