@@ -13,7 +13,7 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
 
     if @task.save
-      redirect_to @task, notice: 'Task added!'
+      redirect_to tasks_path, notice: 'Task added!'
     else
       flash[:error] = "An error occurred."
       render :new
@@ -42,23 +42,18 @@ class TasksController < ApplicationController
   def update
     @task = Task.find(params[:id])
     if @task.update_attributes(task_params)
-      # flash[:notice] = "Task updated"
-      # redirect_to @task
-    else
-      flash[:error] = "there was an error. Try again"
-      # render :edit
+      respond_with(@task) do |format|
+        format.html { redirect_to tasks_path }
     end
-
-    respond_with(@task)
     # do |format|
     #   format.html { redirect_to tasks_path }
     # end
   end
+end
 
   private
 
   def task_params
     params.require(:task).permit(:description)
   end
-
 end
