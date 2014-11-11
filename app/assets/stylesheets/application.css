@@ -113,6 +113,45 @@ small.light {
   color: #FF6347;
 }
 
+.new-button {
+
+  transition: all 300ms ease;
+}
+
+.new-button:hover {
+
+  color: red;
+
+}
+
+i.add.sign.icon.large {
+  margin: 0;
+  padding: 0;
+}
+
+h1.header.center {
+  text-align: center;
+  clear: both;
+}
+
+.add-new {
+  float: left;
+  margin-top: -22px;
+}
+
+.tasking {
+  margin-top: 30px;
+}
+
+.adding {
+  margin-top: 5px;
+}
+
+
+
+
+
+
 
 
 
