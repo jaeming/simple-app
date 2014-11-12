@@ -5,4 +5,4 @@
         = f.text_field :description, placeholder: 'Description'
         = f.full_error :description, class: "validation"
       %div
-        = f.submit 'Add', class: 'ui teal submit button'
+        = f.submit 'Add', class: 'ui teal submit button', method: :post, remote: true

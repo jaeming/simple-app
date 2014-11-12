@@ -12,13 +12,10 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
+    @task.save
+    respond_with(@task) do |format|
+      format.html { redirect_to tasks_path }
 
-    if @task.save
-      redirect_to tasks_path, notice: 'Task added!'
-    else
-      flash[:error] = "An error occurred."
-      render :new
-    end
   end
 
   def destroy
@@ -45,7 +42,7 @@ end
 
   def update
     @task = Task.find(params[:id])
-    if @task.update_attributes(task_params)
+    @task.update_attributes(task_params)
       respond_with(@task) do |format|
         format.html { redirect_to tasks_path }
     end
