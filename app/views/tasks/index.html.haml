@@ -12,4 +12,5 @@
       .ui.horizontal.icon.divider
         %i.circular.heart.icon.red
       %ul
-        = render @tasks
+        - if current_user
+          = render @tasks
