@@ -1,5 +1,5 @@
 .ui.fluid.form.segment
-  = simple_form_for @task do |f|
+  = simple_form_for Task.new do |f|
     .one.field
       .field
         = f.text_field :description, placeholder: 'Description'

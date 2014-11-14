@@ -2,8 +2,7 @@ class TasksController < ApplicationController
   respond_to :html, :json, :js
 
   def index
-    @tasks = Task.all
-    @task = Task.new
+    @tasks = current_user.tasks
   end
 
   def new
@@ -12,45 +11,39 @@ class TasksController < ApplicationController
 
   def create
     @task = current_user.tasks.build(task_params)
-    @task.save
+    @task.save!
     respond_with(@task) do |format|
       format.html { redirect_to tasks_path }
-
+    end
   end
 
   def destroy
-    @task = Task.find(params[:id])
-
-    if @task.destroy
-      flash[:notice] = "Task complete!"
-    else
-      flash[:error] = "Something went wrong. Try again."
-    end
-
+    @task = current_user.tasks.find(params[:id])
+    @task.destroy!
     respond_with(@task) do |format|
       format.html { redirect_to tasks_path }
+    end
   end
-end
 
   def show
-    @task = Task.find params[:id]
+    @task = current_user.tasks.find params[:id]
   end
 
   def edit
-    @task = Task.find(params[:id])
+    @task = current_user.tasks.find(params[:id])
   end
 
   def update
-    @task = Task.find(params[:id])
+    @task = current_user.tasks.find(params[:id])
     @task.update_attributes(task_params)
-      respond_with(@task) do |format|
-        format.html { redirect_to tasks_path }
+    respond_with(@task) do |format|
+      format.html { redirect_to tasks_path }
     end
     # do |format|
     #   format.html { redirect_to tasks_path }
     # end
   end
-end
+
 
   private
 
