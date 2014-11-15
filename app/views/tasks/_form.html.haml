@@ -1,8 +1,7 @@
-.ui.fluid.form.segment
+.ui.form.segment
   = simple_form_for Task.new do |f|
-    .one.field
-      .field
-        = f.text_field :description, placeholder: 'Description'
-        = f.full_error :description, class: "validation"
-      %div
+    .inline.field
+      = f.text_field :description, placeholder: 'Task description', class: 'full-width'
+      = f.full_error :description, class: "validation"
+      .submit-container
         = f.submit 'Add', class: 'ui teal submit button', method: :post, remote: true

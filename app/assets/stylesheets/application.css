@@ -39,6 +39,21 @@ a {
   margin: 0 auto;
 }
 
+.ui.form .inline.fields .field > label, .ui.form .inline.fields .field > p, .ui.form .inline.fields .field > .ui.input, .ui.form .inline.fields .field > input, .ui.form .inline.field > label, .ui.form .inline.field > p, .ui.form .inline.field > .ui.input, .ui.form .inline.field > input.full-width {
+  width: 80%;
+}
+
+.ui.form .field {
+  margin-left: 1em;
+  margin-top: .5em;
+  margin-bottom: .6em;
+}
+
+.submit-container {
+  display: inline-block !important;
+}
+
+
 
 /*TASKS INDEX*/
 .listall {
@@ -145,6 +160,57 @@ h1.header.center {
 
 .adding {
   margin-top: 5px;
+}
+
+
+
+@media screen and (max-width: 585px) {
+
+.ui.form .inline.fields .field > label, .ui.form .inline.fields .field > p, .ui.form .inline.fields .field > .ui.input, .ui.form .inline.fields .field > input, .ui.form .inline.field > label, .ui.form .inline.field > p, .ui.form .inline.field > .ui.input, .ui.form .inline.field > input.full-width {
+  width: 75%;
+}
+
+.ui.form .field {
+  margin-left: 1em;
+  margin-top: .5em;
+  margin-bottom: .6em;
+}
+
+}
+
+@media screen and (max-width: 479px) {
+
+.ui.form .inline.fields .field > label, .ui.form .inline.fields .field > p, .ui.form .inline.fields .field > .ui.input, .ui.form .inline.fields .field > input, .ui.form .inline.field > label, .ui.form .inline.field > p, .ui.form .inline.field > .ui.input, .ui.form .inline.field > input.full-width {
+  width: auto;
+}
+
+.ui.form .field {
+  margin-left: 1em;
+  margin-top: .5em;
+  margin-bottom: .6em;
+}
+
+}
+
+@media screen and (max-width: 421px) {
+
+.ui.form .inline.fields .field > label, .ui.form .inline.fields .field > p, .ui.form .inline.fields .field > .ui.input, .ui.form .inline.fields .field > input, .ui.form .inline.field > label, .ui.form .inline.field > p, .ui.form .inline.field > .ui.input, .ui.form .inline.field > input.full-width {
+  width: 100%;
+
+}
+
+.ui.form .field {
+  margin-left: 0em;
+  margin-top: .5em;
+  margin-bottom: .6em;
+}
+
+.submit-container {
+  display: block !important;
+  padding-top: 15px;
+  margin: 0 auto !important;
+}
+
 }
 
 
