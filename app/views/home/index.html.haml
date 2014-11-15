@@ -2,9 +2,12 @@
   .column
     %h1
       %i.circular.inverted.cloud.teal.icon
-      Simple Tasks
-    %p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form...
+      Simple Task
+    %p Do you review your ToDo list and find items on there from last year? You never got around to it or you probably don't even need to do it anymore.
+    = link_to new_user_registration_path do
+      .ui.button.teal
+        get started
 .one.column.page.ui.grid
   .column
     .ui.segment
-      %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+      %p The Simple Task app auto-deletes any task older than 7 days. You may be surprised to find that with a built in expiration date, you'll be much more productive. You'll intrinsically know what is most important as Simple app lets you know how much time is left on each task before it expires.  And you'll find those things that somehow just weren't important enough, will just evaporate, leaving you feeling more productive and guilt-free( I mean, who needs to be reminded that they forgot to send Aunt Clarice a birthday card?). Out of sight, out of mind!

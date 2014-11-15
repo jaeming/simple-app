@@ -1,0 +1,20 @@
+.medium-container
+  %h2 Sign up
+  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = f.error_notification
+    .ui.form.segment
+      .ui.left.labeled.icon.input
+        = f.input :email, required: true, autofocus: true, label: false, placeholder: 'Email'
+        %i.user.icon
+        %br
+      .ui.left.labeled.icon.input
+        = f.input :password, required: true, label: false, placeholder: 'Password (8 Characters minimum)'
+        %i.lock.icon
+        %br
+      .ui.left.labeled.icon.input
+        = f.input :password_confirmation, required: true, label: false, placeholder: 'Confirm password'
+        %i.lock.icon
+        %br
+      = f.button :submit, "Sign up", class: 'ui teal submit button'
+  %br
+  = render "devise/shared/links"

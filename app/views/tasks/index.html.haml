@@ -1,16 +1,17 @@
 .row.adding
   .medium-container
-    %h2.ui.header
-      %i.edit.icon.circular.inverted.teal
-      Add Task
     = render partial: "form"
 .row.tasking
   .medium-container
-    .ui.piled.segment
-      %h1.header.center
-        Tasks
-      .ui.horizontal.icon.divider
-        %i.circular.heart.icon.red
-      %ul
-        - if current_user
+    -if user_signed_in?
+      .ui.piled.segment
+        %h1.header.center
+          Tasks
+        .ui.horizontal.icon.divider
+          %i.circular.heart.icon.red
+        %ul
           = render @tasks
+    - else
+      %h1.header.center
+        Simple Task
+

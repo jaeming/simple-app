@@ -53,6 +53,24 @@ a {
   display: inline-block !important;
 }
 
+i.inverted.teal.icon{
+  font-size: .7em;
+  margin-top: -10px;
+}
+
+span.nav-title {
+  font-weight: 600;
+  color: #555555;
+}
+
+.ui.menu:not(.vertical) .item > .button {
+  margin-top: 0px;
+}
+
+
+.ui.labeled.input input {
+  padding-left: 2.5em !important;
+}
 
 
 /*TASKS INDEX*/
@@ -76,6 +94,10 @@ a {
   position: absolute;
   margin-top: 3px;
   color: #878787;
+}
+
+button, input, optgroup, select, textarea {
+  color: red;
 }
 
 .tasks i.empty.checkbox.large.icon:hover {
