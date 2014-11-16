@@ -1,7 +1,7 @@
 .ui.form.segment
-  = simple_form_for Task.new do |f|
+  = simple_form_for Task.new, :remote => true do |f|
     .inline.field
       = f.text_field :description, placeholder: 'Task description', class: 'full-width'
       = f.full_error :description, class: "validation"
       .submit-container
-        = f.submit 'Add', class: 'ui teal submit button', method: :post, remote: true
+        = f.submit 'Add', class: 'ui teal submit button'

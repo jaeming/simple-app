@@ -74,6 +74,31 @@ span.nav-title {
 
 
 /*TASKS INDEX*/
+
+.highlight {
+  animation: highlight 2s;
+   -webkit-animation: highlight 2s;
+  -moz-animation:    highlight 2s;
+  -o-animation:      highlight 2s;
+}
+
+@-webkit-keyframes highlight {
+    from {background: yellow;}
+    to {background: transparent;}
+}
+@-moz-keyframes highlight {
+    from {background: yellow;}
+    to {background: transparent;}
+}
+@-o-keyframes highlight {
+    from {background: yellow;}
+    to {background: transparent;}
+}
+@keyframes highlight {
+    from {background: yellow;}
+    to {background: transparent;}
+}
+
 .listall {
   margin-left: 5%;
 }

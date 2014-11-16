@@ -1,0 +1,10 @@
+// $('#tasksm').prepend("<li class='task-list'><%= @task.description %></li>")
+$('#tasksm').prepend("<%= escape_javascript(render :partial => @task, :locals => {:task => @task}) %>");
+$('.task-icon-edit').hide();
+$('#task-' +<%= @task.id %>).addClass('highlight');
+$('#task_description').val('');
+
+setTimeout(function() {
+  $('#task-' +<%= @task.id %>).removeClass('highlight');
+}, 5000);
+
