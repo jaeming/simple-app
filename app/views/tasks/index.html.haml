@@ -10,7 +10,7 @@
         .ui.horizontal.icon.divider
           %i.circular.heart.icon.red
         %ul
-          = render @tasks
+          = render @tasks.reverse_order
     - else
       %h1.header.center
         Simple Task
