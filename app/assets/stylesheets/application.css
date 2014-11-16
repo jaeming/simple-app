@@ -96,6 +96,12 @@ span.nav-title {
   color: #878787;
 }
 
+.ui.form textarea, .ui.form input[type="checkbox"] {
+  margin-right: 10px;
+  vertical-align: baseline;
+}
+
+
 button, input, optgroup, select, textarea {
   color: red;
 }

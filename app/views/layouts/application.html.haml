@@ -16,7 +16,7 @@
         - if current_user
           .right.menu
             .item
-              = link_to destroy_user_session_path do
+              = link_to destroy_user_session_path, method: :delete do
                 .ui.button.mini
                   log out
         - else
