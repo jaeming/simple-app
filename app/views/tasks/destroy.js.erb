@@ -1,5 +1,5 @@
 <% if @task.destroyed? %>
-  $('#task-' +<%= @task.id %>).wrap("<strike>").delay(300).fadeOut(1800);
+  $('#task-' +<%= @task.id %>).wrap("<strike>").delay(300).fadeOut(1600);
 <% else %>
   $('#task-' +<%= @task.id %>).prepend("<div class='validation'><%= flash[:error] = "Error. Try again please." %></div>");
 <% end %>

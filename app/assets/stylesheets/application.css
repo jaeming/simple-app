@@ -149,6 +149,13 @@ button, input, optgroup, select, textarea {
   margin-top: 3px;
 }
 
+.checked-it {
+  opacity: 100;
+  position: absolute;
+  margin-top: 3px;
+}
+
+
 
 
 .task-font {
